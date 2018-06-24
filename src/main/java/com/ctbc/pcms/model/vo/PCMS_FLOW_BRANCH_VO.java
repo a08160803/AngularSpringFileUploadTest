@@ -29,6 +29,9 @@ public class PCMS_FLOW_BRANCH_VO extends PCMS_BASIC_VO implements Serializable {
 	@Column(name = "TRADE_ID")
 	private String tradeId;
 
+	@Column(name = "STATUS")
+	private String status;
+
 	public PCMS_FLOW_BRANCH_VO() {
 	}
 
@@ -78,6 +81,14 @@ public class PCMS_FLOW_BRANCH_VO extends PCMS_BASIC_VO implements Serializable {
 
 	public void setTradeId(String tradeId) {
 		this.tradeId = tradeId;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }

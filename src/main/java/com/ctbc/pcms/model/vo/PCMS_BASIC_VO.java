@@ -1,7 +1,7 @@
 package com.ctbc.pcms.model.vo;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
@@ -17,14 +17,14 @@ public class PCMS_BASIC_VO implements Serializable {
 
 	@CreationTimestamp
 	@Column(name = "CREATE_DATE")
-	private Date createDate;
+	private Timestamp createDate;
 
 	@Column(name = "CREATE_USER")
 	private String createUser;
 
 	@UpdateTimestamp
 	@Column(name = "MODIFY_DATE")
-	private Date modifyDate;
+	private Timestamp modifyDate;
 
 	@Column(name = "MODIFY_USER")
 	private String modifyUser;
@@ -33,11 +33,11 @@ public class PCMS_BASIC_VO implements Serializable {
 	@Column(name = "[VERSION]")
 	private Integer version;
 
-	public Date getCreateDate() {
+	public Timestamp getCreateDate() {
 		return createDate;
 	}
 
-	public void setCreateDate(Date createDate) {
+	public void setCreateDate(Timestamp createDate) {
 		this.createDate = createDate;
 	}
 
@@ -49,11 +49,11 @@ public class PCMS_BASIC_VO implements Serializable {
 		this.createUser = createUser;
 	}
 
-	public Date getModifyDate() {
+	public Timestamp getModifyDate() {
 		return modifyDate;
 	}
 
-	public void setModifyDate(Date modifyDate) {
+	public void setModifyDate(Timestamp modifyDate) {
 		this.modifyDate = modifyDate;
 	}
 

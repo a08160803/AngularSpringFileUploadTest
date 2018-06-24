@@ -32,6 +32,12 @@ public class PCMS_FLOW_MAIN_VO extends PCMS_BASIC_VO implements Serializable {
 	@Column(name = "ROC_DATE")
 	private String rocDate;
 
+	@Column(name = "BRANCH")
+	private Integer branch;
+
+	@Column(name = "STATUS")
+	private String status;
+
 	public PCMS_FLOW_MAIN_VO() {
 	}
 
@@ -89,6 +95,22 @@ public class PCMS_FLOW_MAIN_VO extends PCMS_BASIC_VO implements Serializable {
 
 	public void setCustomerName(String customerName) {
 		this.customerName = customerName;
+	}
+
+	public Integer getBranch() {
+		return branch;
+	}
+
+	public void setBranch(Integer branch) {
+		this.branch = branch;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 }
