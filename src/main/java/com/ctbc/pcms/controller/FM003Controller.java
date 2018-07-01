@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class FM003Controller {
 
-	@RequestMapping(value = "inquire", method = RequestMethod.GET)
+	@RequestMapping(value = "/FM003/inquire", method = RequestMethod.GET)
 	@ResponseBody
 	public Map<String, Object> inquire() {
 		Map<String, Object> responseMap = new HashMap<String, Object>();

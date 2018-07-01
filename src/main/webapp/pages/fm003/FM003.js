@@ -2,6 +2,8 @@ angular.module('PCMS').controller('FM003Controller',
 		[ '$scope', '$rootElement', '$http', '$location', function($scope, $rootElement, $http, $location) {
 			$scope.textMessage = '';
 			
+			$scope.includeUrl = $rootElement.attr('ng-app') + '/pages/common/COMMON_SELF_BUILD.html';
+			
 			$scope.init = function() {
 				$scope.inputVO = {
 //						depId : '0901',
@@ -16,8 +18,11 @@ angular.module('PCMS').controller('FM003Controller',
 					method: 'GET',
 					url: url
 				}).then(function successCallback(response) {
+					console.log('response >>>>> ', response);
 				});
 				
 			}
 			$scope.init();
+			
+			$scope.toUrl = "../pages/common/COMMON_SELF_BUILD.html";
 		} ]);

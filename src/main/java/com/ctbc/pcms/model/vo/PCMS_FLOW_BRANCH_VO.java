@@ -1,18 +1,14 @@
 package com.ctbc.pcms.model.vo;
 
-import java.io.Serializable;
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "PCMS_FLOW_BRANCH")
-public class PCMS_FLOW_BRANCH_VO extends PCMS_BASIC_VO implements Serializable {
+public class PCMS_FLOW_BRANCH_VO extends PCMS_BASIC_VO {
 
 	private static final long serialVersionUID = 1L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "SEQ")
-	private Integer seq;
 
 	@Column(name = "BRANCH")
 	private Integer branch;
@@ -33,14 +29,6 @@ public class PCMS_FLOW_BRANCH_VO extends PCMS_BASIC_VO implements Serializable {
 	private String status;
 
 	public PCMS_FLOW_BRANCH_VO() {
-	}
-
-	public Integer getSeq() {
-		return seq;
-	}
-
-	public void setSeq(Integer seq) {
-		this.seq = seq;
 	}
 
 	public Integer getBranch() {

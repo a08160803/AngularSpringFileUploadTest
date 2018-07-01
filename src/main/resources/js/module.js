@@ -9,6 +9,10 @@ angular.module('PCMS', ['ngRoute'])
             		templateUrl: '/PCMS/pages/fm001/FM001S02.html',
             		controller: 'FM001S02Controller'
             	})
+            	.when('/FM003',{
+            		templateUrl: '/PCMS/pages/fm003/FM003.html',
+            		controller: 'FM003Controller'
+            	})
             	.otherwise({
             		redirectTo: '/index.html'
             	})

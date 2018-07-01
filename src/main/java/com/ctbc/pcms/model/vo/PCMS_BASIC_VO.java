@@ -4,6 +4,9 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 
@@ -14,6 +17,11 @@ import org.hibernate.annotations.UpdateTimestamp;
 public class PCMS_BASIC_VO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "SEQ")
+	private Integer seq;
 
 	@CreationTimestamp
 	@Column(name = "CREATE_DATE")
@@ -32,6 +40,14 @@ public class PCMS_BASIC_VO implements Serializable {
 	@Version
 	@Column(name = "[VERSION]")
 	private Integer version;
+
+	public Integer getSeq() {
+		return seq;
+	}
+
+	public void setSeq(Integer seq) {
+		this.seq = seq;
+	}
 
 	public Timestamp getCreateDate() {
 		return createDate;

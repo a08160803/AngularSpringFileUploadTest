@@ -12,5 +12,16 @@
 		<label>客戶姓名:</label> 
 		<input type="text" class="form-control" id="customer.name" ng-model="inputVO.customerName" />
 	</div>
+	
+	<div class="form-group">
+		<label>上傳圖片:</label> 
+		<input type="file" file="file" class="form-control" id="customer.file" />
+	</div>
+	
 	<button type="submit" class="btn btn-outline-primary" ng-click="submit()">進件</button>
+
+	<button type="button" class="btn btn-outline-primary" download ng-click="fileDownload()" ng-if="inputVO.flowMainSeq != ''">下載</button>
+	
+	<img ng-if="inputVO.flowMainSeq != ''" ng-src="data:image/JPEG;base64,{{image}}">
+	
 </div>

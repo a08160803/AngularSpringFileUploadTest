@@ -6,6 +6,10 @@ angular.module('PCMS')
 		        $location.path('/FM001S02');
 		    }
 			
+			$scope.toFM003 = function () {
+				$location.path('/FM003');
+			}
+			
 			$scope.initDB = function(){
 				var url = $rootElement.attr('ng-app') + '/initDB';
 				

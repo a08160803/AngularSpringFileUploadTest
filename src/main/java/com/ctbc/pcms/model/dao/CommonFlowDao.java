@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.ctbc.pcms.model.vo.PCMS_DOC_FILE_VO;
+import com.ctbc.pcms.model.vo.PCMS_DOC_INFO_VO;
 import com.ctbc.pcms.model.vo.PCMS_FLOW_BRANCH_VO;
 import com.ctbc.pcms.model.vo.PCMS_FLOW_MAIN_VO;
 
@@ -108,6 +110,22 @@ public class CommonFlowDao {
 		PCMS_FLOW_BRANCH_VO pcmsFlowBranchVO = (PCMS_FLOW_BRANCH_VO) session.get(PCMS_FLOW_BRANCH_VO.class, flowBranchSeq);
 		pcmsFlowBranchVO.setStatus("1");
 		session.saveOrUpdate(pcmsFlowBranchVO);
+		session.getTransaction().commit();
+	}
+	
+	@Transactional
+	public void insertDocInfo(PCMS_DOC_INFO_VO pcmsDocInfoVO) {
+		Session session = sessionFactory.getCurrentSession();
+		session.beginTransaction();
+		session.save(pcmsDocInfoVO);
+		session.getTransaction().commit();
+	}
+	
+	@Transactional
+	public void insertDocFile(PCMS_DOC_FILE_VO pcmsDocFileVO) {
+		Session session = sessionFactory.getCurrentSession();
+		session.beginTransaction();
+		session.save(pcmsDocFileVO);
 		session.getTransaction().commit();
 	}
 

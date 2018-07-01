@@ -1,18 +1,14 @@
 package com.ctbc.pcms.model.vo;
 
-import java.io.Serializable;
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "PCMS_TRADT_SET")
-public class PCMS_TRADE_SET_VO extends PCMS_BASIC_VO implements Serializable {
+public class PCMS_TRADE_SET_VO extends PCMS_BASIC_VO {
 
 	private static final long serialVersionUID = 1L;
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "SEQ")
-	private Integer seq;
 
 	@Column(name = "BUSINESS_ID")
 	private String businessId;
@@ -24,14 +20,6 @@ public class PCMS_TRADE_SET_VO extends PCMS_BASIC_VO implements Serializable {
 	private String tradeName;
 
 	public PCMS_TRADE_SET_VO() {
-	}
-
-	public Integer getSeq() {
-		return seq;
-	}
-
-	public void setSeq(Integer seq) {
-		this.seq = seq;
 	}
 
 	public String getBusinessId() {

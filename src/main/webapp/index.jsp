@@ -44,7 +44,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
 	
 	<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/module.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/directives/fileDirective.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/index.js"></script>
 	<script type="text/javascript" src="<%=request.getContextPath() %>/pages/fm001/FM001S02.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/pages/fm003/FM003.js"></script>
+	<script type="text/javascript" src="<%=request.getContextPath() %>/pages/common/COMMON_SELF_BUILD.js"></script>
 </body>
 </html>
